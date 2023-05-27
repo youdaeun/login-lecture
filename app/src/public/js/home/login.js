@@ -21,5 +21,6 @@ function login(){
             "Contet-Type": "application/json",
         },
         body : JSON.stringify(req),
-    });
+    }).then((res)=>res.json())
+    .then((res)=>console.log(res));//파라미터 값을 넘기기
 }
