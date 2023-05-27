@@ -15,11 +15,11 @@ const output ={
 };
 
 const process= {
-    login:(req,res)=>{//프론트에서 데이터를 받아두는 저장 공간이다.
+    login : (req,res)=>{//프론트에서 데이터를 받아두는 저장 공간이다.
        const user = new User(req.body);
        const response = user.login();
        console.log(response);
-       //return res.json(response);
+       return res.json(response);
     },
 };
 
