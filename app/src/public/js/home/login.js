@@ -21,6 +21,15 @@ function login(){
             "Contet-Type": "application/json",
         },
         body : JSON.stringify(req),
-    }).then((res)=>res.json())
-    .then((res)=>console.log(res));//파라미터 값을 넘기기
+    })
+    .then((res)=>res.json())
+    .then((res)=>{
+        if(res.success){
+            location.href = "/";
+        }else{
+            alert(res.msg);
+        }
+    }).catch((err)=>{
+        console.error("로그인 중 에러");
+    });//파라미터 값을 넘기기
 }
