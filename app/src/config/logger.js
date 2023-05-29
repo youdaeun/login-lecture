@@ -37,3 +37,14 @@ const opts = {
 const logger = createLogger({
   transports: [opts.file],
 });
+
+if (process.env.NODE_ENV !== "production") {
+  logger.add(opts.console);//실제 서비스하는 서버와 개발용으로 하는 서버를 구분하기 위해 만든 코드
+}
+
+logger.stream = {
+  write: (message) => logger.info(message),
+};
+
+module.exports = logger;
+//하위 레벨은 상위레벨까지 출력해줌
