@@ -2,6 +2,7 @@
 
 //만약 console.log("hello");한다면 
 //이것의 의미는 register.js와 register.ejs가 연결되었는지 확인하는 코드, 프론트 단에서 동작하는 자바스크립트이다.
+//위 주석문은 register.js과 연동이 되는지 test해본 것에 대한 설명입니다.
 
 const id = document.querySelector("#id"),//()안에는 선택자를 입력=public/ejs파일에 있는 정보
     name = document.querySelector("#name"),
